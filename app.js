@@ -20,9 +20,9 @@ app.use((req, res, next) => {
 PORT= 5000
 // middleware section
 app.use(express.json());
-app.use("/users", userRouter);
+app.use("/user", userRouter);
 app.use("/admin", adminRouter);
-app.use("/movies", movieRouter);
+app.use("/movie", movieRouter);
 app.use("/booking", bookingRouter);
 
 const DB="mongodb+srv://kamil:12345@cluster0.ztsqqzu.mongodb.net/movies?retryWrites=true&w=majority"

@@ -3,7 +3,7 @@ const Movie = require("../models/Movies");
 const users = require('../models/User');
 const Bookings = require("../models/Booking");
 
-const Booking = async (req, res, next) => {
+const newBooking = async (req, res, next) => {
     const {movie, date, seatNumber, user} = req.body;
     let existingMovie;
     let existingUser;
@@ -78,4 +78,4 @@ const deleteBooking = async (req, res, next) => {
     return res.status(200).json({ message: "Booking deleted successfully" });
 }
   
-module.exports = {Booking, deleteBooking};   
+module.exports = {newBooking, deleteBooking};   
